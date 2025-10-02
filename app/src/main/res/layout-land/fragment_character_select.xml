@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/characterSelectLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fragmentbackground"
+    tools:context=".CharacterSelectFragment">
+
+    <TextView
+        android:id="@+id/characterName"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="20"
+        android:textColor="@color/gold"
+        android:textSize="33sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <ImageView
+        android:id="@+id/hpIcon"
+        android:layout_width="18dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characterName"
+        app:srcCompat="@drawable/hpicon"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/characterHP"
+        android:layout_width="85dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="4dp"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="10"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/hpIcon"
+        app:layout_constraintTop_toBottomOf="@+id/characterName" />
+
+    <ImageView
+        android:id="@+id/goldIcon"
+        android:layout_width="19dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toEndOf="@+id/characterHP"
+        app:layout_constraintTop_toBottomOf="@+id/characterName"
+        app:srcCompat="@drawable/goldicon"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/characterGold"
+        android:layout_width="101dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="10"
+        android:textColor="@color/gold"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/goldIcon"
+        app:layout_constraintTop_toBottomOf="@+id/characterName" />
+
+    <TextView
+        android:id="@+id/characterInfo"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="10"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characterHP" />
+
+    <ImageView
+        android:id="@+id/artifactImage"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characterInfo" />
+
+    <TextView
+        android:id="@+id/artifactName"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="9dp"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="10"
+        android:textColor="@color/gold"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/artifactImage"
+        app:layout_constraintTop_toBottomOf="@+id/characterInfo" />
+
+    <TextView
+        android:id="@+id/artifactInfo"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="10"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/artifactImage"
+        app:layout_constraintTop_toBottomOf="@+id/artifactName" />
+
+    <TextView
+        android:id="@+id/selectCharacterText"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="10"
+        android:text="캐 릭 터 를   선 택 하 십 시 오"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/characterIconsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/characterIconsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.815">
+
+        <ImageButton
+            android:id="@+id/characterIronclad"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginRight="15dp"
+            android:contentDescription="Ironclad"
+            app:srcCompat="@drawable/ironcladicon" />
+
+        <ImageButton
+            android:id="@+id/characterSilent"
+            android:layout_width="57dp"
+            android:layout_height="58dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:contentDescription="Silent"
+            app:srcCompat="@drawable/silenticon" />
+
+        <ImageButton
+            android:id="@+id/characterDefect"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:contentDescription="Defect"
+            app:srcCompat="@drawable/defecticon" />
+
+        <ImageButton
+            android:id="@+id/characterWatcher"
+            android:layout_width="56dp"
+            android:layout_height="58dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:contentDescription="Watcher"
+            app:srcCompat="@drawable/watchericon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ascensionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characterIconsLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:textAlignment="center">
+
+            <CheckBox
+                android:id="@+id/ascensioncheckBox"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="55dp"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="10"
+                android:text="승천 모드"
+                android:textColor="@color/gold"
+                android:textStyle="bold" />
+
+            <android.widget.Button
+                android:id="@+id/ascensionLeftArrow"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:background="@android:color/transparent"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="10"
+                android:textColor="@color/gold"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ascensionLevelText"
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:layout_marginHorizontal="7dp"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="10"
+                android:text="단계1"
+                android:textAlignment="center"
+                android:textColor="@color/skyblue"
+                android:textSize="14sp" />
+
+            <android.widget.Button
+                android:id="@+id/ascensionRightArrow"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:background="@android:color/transparent"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="10"
+                android:textColor="@color/gold"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ascensionDescription"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="10"
+            android:text="난이도 설명"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/startGameButton"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="10"
+        android:src="@drawable/startframe"
+        android:text="출정"
+        android:textColor="@color/lightgold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <TextView
+        android:id="@+id/startGameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="10"
+        android:text="출정"
+        android:textAlignment="center"
+        android:textColor="@color/lightgold"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintStart_toStartOf="@+id/startGameButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
